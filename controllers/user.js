@@ -17,7 +17,8 @@ module.exports = {
                     urll.save(function (err, url) {
                         if (err) {
                             res.status(500).json({
-                                error: 'Internal server error'
+                                error: 'Internal server error',
+                                err:err
                             });
                         } else {
                             res.status(200).json({
