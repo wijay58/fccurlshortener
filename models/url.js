@@ -12,7 +12,7 @@ let OTPSchema = new Schema({
         default: 0
     }
 })
-let con = mongoose.createConnection("mongodb://localhost/app"); 
+let con = mongoose.createConnection("mongodb+srv://supun:supun123@india-mumbai.ptqnl.mongodb.net/app?retryWrites=true&w=majority"); 
     autoIncrement.initialize(con);
 OTPSchema.plugin(autoIncrement.plugin, { model: 'url', field: 'short_url' });
 module.exports = mongoose.model('url', OTPSchema);
